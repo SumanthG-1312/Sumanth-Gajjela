@@ -1,148 +1,240 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="100%" height="100%">
   <defs>
-    <!-- Background pure black -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <!-- Background pure deep black -->
+    <linearGradient id="blackBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#000000" />
-      <stop offset="100%" stop-color="#050505" />
+      <stop offset="100%" stop-color="#000000" />
     </linearGradient>
 
-    <!-- Skin tone gradients -->
-    <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C68662" />
-      <stop offset="40%" stop-color="#B8734D" />
-      <stop offset="100%" stop-color="#9C5938" />
-    </linearGradient>
-    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#8A482A" />
-      <stop offset="100%" stop-color="#5E3019" />
+    <!-- Warm studio skin tones corresponding accurately to Sumanth's photo -->
+    <linearGradient id="sumanthSkin" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#CA8A62" />
+      <stop offset="45%" stop-color="#B9774F" />
+      <stop offset="85%" stop-color="#9E5D39" />
+      <stop offset="100%" stop-color="#7B4224" />
     </linearGradient>
 
-    <!-- Suit gradient -->
-    <linearGradient id="suit" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E2024" />
-      <stop offset="50%" stop-color="#141517" />
-      <stop offset="100%" stop-color="#0B0C0E" />
-    </linearGradient>
-    <linearGradient id="lapel" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#282B30" />
-      <stop offset="100%" stop-color="#141517" />
+    <!-- Subtle jaw and neck contour shadow -->
+    <linearGradient id="contourShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#70361A" />
+      <stop offset="100%" stop-color="#461E0D" />
     </linearGradient>
 
-    <!-- Hair gradient -->
-    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#221E1C" />
-      <stop offset="50%" stop-color="#141211" />
-      <stop offset="100%" stop-color="#0A0908" />
+    <!-- Black tailored blazer textures -->
+    <linearGradient id="suitBlazer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181A1D" />
+      <stop offset="40%" stop-color="#0F1012" />
+      <stop offset="100%" stop-color="#070708" />
     </linearGradient>
 
-    <radialGradient id="rimLight" cx="65%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+    <linearGradient id="lapelLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22252A" />
+      <stop offset="100%" stop-color="#121316" />
+    </linearGradient>
+
+    <linearGradient id="lapelRight" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24272D" />
+      <stop offset="100%" stop-color="#131418" />
+    </linearGradient>
+
+    <!-- Voluminous dark hair gradient -->
+    <linearGradient id="voluminousHair" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#1C1816" />
+      <stop offset="30%" stop-color="#13100E" />
+      <stop offset="70%" stop-color="#0C0A09" />
+      <stop offset="100%" stop-color="#050504" />
+    </linearGradient>
+
+    <!-- Warm key light reflection on hair -->
+    <linearGradient id="hairHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A3F37" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#221C18" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Soft studio edge vignette -->
+    <radialGradient id="studioAmbient" cx="60%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)" />
+      <stop offset="60%" stop-color="rgba(20,20,25,0.02)" />
       <stop offset="100%" stop-color="rgba(0,0,0,0)" />
     </radialGradient>
   </defs>
 
-  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <!-- Deep black photo studio backdrop -->
+  <rect width="900" height="1100" fill="url(#blackBg)" />
+  <circle cx="530" cy="420" r="380" fill="url(#studioAmbient)" />
 
-  <!-- Subtle ambient studio spotlight -->
-  <circle cx="480" cy="380" r="320" fill="url(#rimLight)" />
+  <!-- ========================================== -->
+  <!-- SUIT & BODY (Slightly angled posture matching photo) -->
+  <!-- ========================================== -->
+  <g id="blazer-torso">
+    <!-- Back & shoulder mass -->
+    <path d="M 80 1100 L 140 820 C 180 700, 260 590, 390 550 L 580 550 C 710 590, 780 700, 830 840 L 880 1100 Z" fill="url(#suitBlazer)" />
 
-  <!-- Shoulders & Suit Torso -->
-  <g id="body">
-    <!-- Back jacket base -->
-    <path d="M 120 1000 L 150 780 C 180 660, 240 560, 340 530 L 460 530 C 560 560, 640 660, 680 780 L 720 1000 Z" fill="url(#suit)" />
+    <!-- Left shoulder highlight rim -->
+    <path d="M 140 820 C 180 700, 260 590, 390 550" stroke="#2D3138" stroke-width="2.5" fill="none" opacity="0.6" />
+    <!-- Right shoulder highlight rim -->
+    <path d="M 580 550 C 710 590, 780 700, 830 840" stroke="#2E333A" stroke-width="2.5" fill="none" opacity="0.5" />
 
-    <!-- White dress shirt visible in center V -->
-    <path d="M 370 520 L 430 520 L 460 670 L 420 840 L 380 840 L 340 670 Z" fill="#F8FAFC" />
-    <!-- White shirt inner shadow & collar folds -->
-    <path d="M 395 530 L 420 720 L 398 840 L 392 840 L 380 720 Z" fill="#E2E8F0" />
-    <path d="M 370 525 L 340 640 L 375 625 L 395 535 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
-    <path d="M 430 525 L 460 640 L 425 625 L 405 535 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5" />
-    <!-- Shirt buttons -->
-    <circle cx="400" cy="740" r="3" fill="#94A3B8" />
-    <circle cx="400" cy="800" r="3" fill="#94A3B8" />
+    <!-- White collared dress shirt opened slightly at collar -->
+    <path d="M 430 530 L 530 530 L 560 740 L 500 940 L 460 940 L 400 740 Z" fill="#F8FAFC" />
+    <!-- Collar fold depth and shadows -->
+    <path d="M 465 540 L 495 760 L 485 940 L 475 940 L 450 760 Z" fill="#E2E8F0" />
+    
+    <!-- Open shirt collar wings -->
+    <!-- Left collar wing -->
+    <path d="M 425 530 L 385 660 L 435 640 L 460 545 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 420 545 L 395 650 L 430 635 Z" fill="#F1F5F9" opacity="0.7" />
+    <!-- Right collar wing -->
+    <path d="M 535 530 L 575 660 L 525 640 L 500 545 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 540 545 L 565 650 L 530 635 Z" fill="#E2E8F0" opacity="0.7" />
 
-    <!-- Suit Lapels -->
-    <!-- Left lapel (viewer's left) -->
-    <path d="M 260 620 L 340 530 L 385 680 L 320 770 L 260 620 Z" fill="url(#lapel)" stroke="#2B2E33" stroke-width="2" />
-    <path d="M 320 770 L 385 680 L 395 860 L 290 890 Z" fill="#17191C" />
+    <!-- Mother of pearl shirt buttons -->
+    <circle cx="480" cy="790" r="3.5" fill="#94A3B8" />
+    <circle cx="480" cy="860" r="3.5" fill="#94A3B8" />
 
-    <!-- Right lapel (viewer's right) -->
-    <path d="M 540 620 L 460 530 L 415 680 L 480 770 L 540 620 Z" fill="url(#lapel)" stroke="#2B2E33" stroke-width="2" />
-    <path d="M 480 770 L 415 680 L 405 860 L 510 890 Z" fill="#17191C" />
+    <!-- Left Blazer Lapel -->
+    <path d="M 280 660 L 390 550 L 445 740 L 360 850 L 280 660 Z" fill="url(#lapelLeft)" stroke="#262A30" stroke-width="2" />
+    <path d="M 360 850 L 445 740 L 460 980 L 320 1020 Z" fill="#131417" />
+    <path d="M 445 740 L 460 980" stroke="#22252A" stroke-width="1.5" />
+
+    <!-- Right Blazer Lapel -->
+    <path d="M 680 660 L 570 550 L 515 740 L 600 850 L 680 660 Z" fill="url(#lapelRight)" stroke="#262A30" stroke-width="2" />
+    <path d="M 600 850 L 515 740 L 500 980 L 640 1020 Z" fill="#131417" />
+    <path d="M 515 740 L 500 980" stroke="#22252A" stroke-width="1.5" />
   </g>
 
-  <!-- Neck & Adam's apple -->
+  <!-- ========================================== -->
+  <!-- NECK & THROAT (Warm toned, accurate contours) -->
+  <!-- ========================================== -->
   <g id="neck">
-    <path d="M 360 420 L 350 540 C 370 560, 430 560, 450 540 L 440 420 Z" fill="url(#skin)" />
-    <!-- Neck shadow under chin -->
-    <path d="M 350 420 C 370 480, 430 480, 450 420 L 450 460 C 430 510, 370 510, 350 460 Z" fill="url(#skinShadow)" opacity="0.6" />
+    <path d="M 415 410 L 405 560 C 435 585, 525 585, 555 560 L 545 410 Z" fill="url(#sumanthSkin)" />
+    <!-- Chin and jaw cast shadow -->
+    <path d="M 405 410 C 435 480, 525 480, 555 410 L 555 455 C 525 520, 435 520, 405 455 Z" fill="url(#contourShadow)" opacity="0.65" />
+    <!-- Subtle sternocleidomastoid muscle line -->
+    <path d="M 425 460 L 445 550" stroke="#874726" stroke-width="2" opacity="0.4" stroke-linecap="round" />
+    <path d="M 535 460 L 515 550" stroke="#874726" stroke-width="2" opacity="0.3" stroke-linecap="round" />
   </g>
 
-  <!-- Head & Face Structure -->
+  <!-- ========================================== -->
+  <!-- FACIAL STRUCTURE (Oval jaw, balanced proportions) -->
+  <!-- ========================================== -->
   <g id="face">
-    <!-- Jaw and head base -->
-    <path d="M 315 270 C 310 370, 340 480, 400 480 C 460 480, 490 370, 485 270 C 480 180, 320 180, 315 270 Z" fill="url(#skin)" />
+    <!-- Base face outline -->
+    <path d="M 370 290 
+             C 360 400, 395 500, 480 500 
+             C 565 500, 600 400, 590 290 
+             C 585 190, 375 190, 370 290 Z" fill="url(#sumanthSkin)" />
 
-    <!-- Left & right ears -->
-    <path d="M 305 270 C 290 280, 290 330, 315 340 Z" fill="#B36E48" />
-    <path d="M 495 270 C 510 280, 510 330, 485 340 Z" fill="#B36E48" />
+    <!-- Left & Right Ears -->
+    <!-- Left ear -->
+    <path d="M 365 285 C 345 300, 345 365, 375 375 Z" fill="#BA744D" />
+    <path d="M 360 305 C 352 315, 352 345, 368 355" stroke="#8A482A" stroke-width="2" fill="none" />
+    <!-- Right ear -->
+    <path d="M 595 285 C 615 300, 615 365, 585 375 Z" fill="#BA744D" />
+    <path d="M 600 305 C 608 315, 608 345, 592 355" stroke="#8A482A" stroke-width="2" fill="none" />
 
-    <!-- Cheek & Jaw shading for sculpt -->
-    <path d="M 320 320 C 330 410, 360 460, 400 475 C 370 460, 340 410, 330 350 Z" fill="url(#skinShadow)" opacity="0.35" />
-    <path d="M 480 320 C 470 410, 440 460, 400 475 C 430 460, 460 410, 470 350 Z" fill="url(#skinShadow)" opacity="0.25" />
+    <!-- Jawline definition and shading -->
+    <path d="M 375 350 C 385 435, 420 485, 480 495 C 430 480, 395 430, 385 370 Z" fill="url(#contourShadow)" opacity="0.4" />
+    <path d="M 585 350 C 575 435, 540 485, 480 495 C 530 480, 565 430, 575 370 Z" fill="url(#contourShadow)" opacity="0.3" />
 
-    <!-- Eyes -->
-    <!-- Left eye -->
-    <ellipse cx="360" cy="295" rx="18" ry="10" fill="#FFFFFF" />
-    <circle cx="362" cy="295" r="8" fill="#3D2314" />
-    <circle cx="362" cy="295" r="4.5" fill="#0A0604" />
-    <circle cx="360" cy="293" r="2.5" fill="#FFFFFF" opacity="0.9" />
-    <path d="M 342 293 Q 360 285 378 293" stroke="#26170D" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- Cheekbone warmth -->
+    <ellipse cx="420" cy="355" rx="35" ry="25" fill="#D48F68" opacity="0.25" />
+    <ellipse cx="540" cy="355" rx="35" ry="25" fill="#D48F68" opacity="0.25" />
 
-    <!-- Right eye -->
-    <ellipse cx="440" cy="295" rx="18" ry="10" fill="#FFFFFF" />
-    <circle cx="438" cy="295" r="8" fill="#3D2314" />
-    <circle cx="438" cy="295" r="4.5" fill="#0A0604" />
-    <circle cx="436" cy="293" r="2.5" fill="#FFFFFF" opacity="0.9" />
-    <path d="M 422 293 Q 440 285 458 293" stroke="#26170D" stroke-width="3" fill="none" stroke-linecap="round" />
+    <!-- ========================================== -->
+    <!-- EYES (Large, expressive almond shape with catchlights) -->
+    <!-- ========================================== -->
+    <!-- Left Eye (viewer's left) -->
+    <ellipse cx="425" cy="315" rx="22" ry="12" fill="#FFFFFF" />
+    <ellipse cx="427" cy="315" rx="11" ry="11" fill="#382114" />
+    <circle cx="427" cy="315" r="6" fill="#0A0604" />
+    <!-- Realistic dual catchlights -->
+    <circle cx="425" cy="312" r="3" fill="#FFFFFF" opacity="0.95" />
+    <circle cx="431" cy="317" r="1.5" fill="#FFFFFF" opacity="0.6" />
+    <!-- Upper eyelid crease & lash line -->
+    <path d="M 400 314 Q 425 303 450 314" stroke="#1F130B" stroke-width="3.5" fill="none" stroke-linecap="round" />
+    <path d="M 405 304 Q 426 298 447 305" stroke="#7A3D1E" stroke-width="1.5" fill="none" opacity="0.5" />
 
-    <!-- Eyebrows (thick, defined youthful brows) -->
-    <path d="M 335 272 Q 360 262 385 270" stroke="#1C140F" stroke-width="6" fill="none" stroke-linecap="round" />
-    <path d="M 415 270 Q 440 262 465 272" stroke="#1C140F" stroke-width="6" fill="none" stroke-linecap="round" />
+    <!-- Right Eye (viewer's right) -->
+    <ellipse cx="535" cy="315" rx="22" ry="12" fill="#FFFFFF" />
+    <ellipse cx="533" cy="315" rx="11" ry="11" fill="#382114" />
+    <circle cx="533" cy="315" r="6" fill="#0A0604" />
+    <!-- Realistic dual catchlights -->
+    <circle cx="531" cy="312" r="3" fill="#FFFFFF" opacity="0.95" />
+    <circle cx="537" cy="317" r="1.5" fill="#FFFFFF" opacity="0.6" />
+    <!-- Upper eyelid crease & lash line -->
+    <path d="M 510 314 Q 535 303 560 314" stroke="#1F130B" stroke-width="3.5" fill="none" stroke-linecap="round" />
+    <path d="M 513 305 Q 534 298 555 304" stroke="#7A3D1E" stroke-width="1.5" fill="none" opacity="0.5" />
 
-    <!-- Nose -->
-    <path d="M 400 280 L 396 345 Q 390 358 400 360 Q 410 358 404 345 Z" fill="#AA643E" opacity="0.4" />
-    <path d="M 390 355 Q 400 365 410 355" stroke="#7A3F20" stroke-width="2.5" fill="none" stroke-linecap="round" />
-    <circle cx="388" cy="354" r="2.5" fill="#5E3019" />
-    <circle cx="412" cy="354" r="2.5" fill="#5E3019" />
+    <!-- ========================================== -->
+    <!-- EYEBROWS (Thick, defined, modern masculine shape) -->
+    <!-- ========================================== -->
+    <path d="M 390 286 Q 425 272 458 283" stroke="#18110D" stroke-width="7" fill="none" stroke-linecap="round" />
+    <path d="M 392 284 Q 425 271 456 281" stroke="#2D211A" stroke-width="3" fill="none" stroke-linecap="round" />
+    
+    <path d="M 502 283 Q 535 272 570 286" stroke="#18110D" stroke-width="7" fill="none" stroke-linecap="round" />
+    <path d="M 504 281 Q 535 271 568 284" stroke="#2D211A" stroke-width="3" fill="none" stroke-linecap="round" />
 
-    <!-- Mustache & Stubble -->
-    <path d="M 382 385 Q 400 380 418 385" stroke="#2A1B14" stroke-width="3.5" stroke-linecap="round" opacity="0.65" />
-    <!-- Chin stubble -->
-    <path d="M 385 440 Q 400 450 415 440" stroke="#2A1B14" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+    <!-- ========================================== -->
+    <!-- NOSE (Straight bridge, natural shadow, flared base) -->
+    <!-- ========================================== -->
+    <path d="M 480 295 L 476 380 Q 468 395 480 398 Q 492 395 484 380 Z" fill="#995632" opacity="0.35" />
+    <!-- Nose tip curve & nostrils -->
+    <path d="M 467 392 Q 480 404 493 392" stroke="#682F16" stroke-width="2.8" fill="none" stroke-linecap="round" />
+    <ellipse cx="465" cy="391" rx="3.5" ry="2" fill="#3D1A0B" opacity="0.85" />
+    <ellipse cx="495" cy="391" rx="3.5" ry="2" fill="#3D1A0B" opacity="0.85" />
 
-    <!-- Lips -->
-    <path d="M 378 402 Q 400 396 422 402 Q 400 418 378 402 Z" fill="#995040" />
-    <path d="M 378 402 Q 400 404 422 402" stroke="#68291F" stroke-width="1.8" fill="none" />
+    <!-- ========================================== -->
+    <!-- MUSTACHE & TRIMMED STUBBLE (Accurate signature goatee) -->
+    <!-- ========================================== -->
+    <!-- Mustache right above upper lip -->
+    <path d="M 456 428 Q 480 421 504 428" stroke="#1C140F" stroke-width="4.5" stroke-linecap="round" opacity="0.75" />
+    <path d="M 460 426 Q 480 419 500 426" stroke="#2A1B14" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Soul patch under lower lip -->
+    <path d="M 477 462 L 483 462" stroke="#1C140F" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Clean trimmed jawline & chin stubble -->
+    <path d="M 460 488 Q 480 496 500 488" stroke="#1C140F" stroke-width="3.5" stroke-linecap="round" opacity="0.65" />
+    <path d="M 430 450 Q 450 480 470 492" stroke="#1C140F" stroke-width="2.5" stroke-linecap="round" opacity="0.4" />
+    <path d="M 530 450 Q 510 480 490 492" stroke="#1C140F" stroke-width="2.5" stroke-linecap="round" opacity="0.4" />
+
+    <!-- ========================================== -->
+    <!-- LIPS (Full, natural youthful pinkish brown) -->
+    <!-- ========================================== -->
+    <!-- Upper lip -->
+    <path d="M 452 444 Q 480 437 508 444 Q 480 454 452 444 Z" fill="#994D3F" />
+    <path d="M 452 444 Q 480 448 508 444" stroke="#682A20" stroke-width="2" fill="none" />
+    <!-- Lower lip -->
+    <path d="M 456 445 Q 480 464 504 445 Z" fill="#A85747" />
+    <ellipse cx="480" cy="453" rx="14" ry="4" fill="#C26D5C" opacity="0.4" />
   </g>
 
-  <!-- Voluminous Stylish Wavy Dark Hair -->
-  <g id="hair">
-    <!-- Main hair volume silhouette matching Sumanth's photo -->
-    <path d="M 315 260 
-             C 290 230, 290 140, 330 90 
-             C 360 50, 420 40, 460 65 
-             C 500 90, 520 150, 500 230 
-             C 490 250, 485 270, 485 280
-             C 475 250, 465 240, 450 245
-             C 430 215, 380 215, 350 245
-             C 335 240, 325 250, 315 260 Z" fill="url(#hair)" />
+  <!-- ========================================== -->
+  <!-- SIGNATURE VOLUMINOUS DENSE WAVY DARK HAIR -->
+  <!-- Accurately mirrors Sumanth's distinctive hair volume -->
+  <!-- ========================================== -->
+  <g id="voluminous-hair">
+    <!-- Main dense hair volume silhouette -->
+    <path d="M 370 275 
+             C 340 240, 335 150, 385 90 
+             C 425 45, 510 35, 565 65 
+             C 620 95, 640 160, 615 250 
+             C 605 275, 595 295, 590 305
+             C 580 270, 565 255, 550 260
+             C 525 230, 465 230, 425 260
+             C 400 250, 385 265, 370 275 Z" fill="url(#voluminousHair)" />
 
-    <!-- Individual hair wave textures -->
-    <path d="M 330 140 C 360 80, 430 80, 450 120" stroke="#36302B" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6" />
-    <path d="M 350 110 C 390 60, 440 70, 470 110" stroke="#453E38" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7" />
-    <path d="M 320 170 C 340 130, 380 120, 400 140" stroke="#36302B" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.6" />
-    <path d="M 400 100 C 440 90, 470 120, 490 170" stroke="#3A332E" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6" />
-    <path d="M 380 70 Q 420 50 450 75" stroke="#4E4742" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8" />
+    <!-- High-rise wavy puffs and texture swoops -->
+    <path d="M 385 150 C 420 80, 520 80, 545 130" stroke="#3D342D" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.7" />
+    <path d="M 410 115 C 460 60, 530 70, 570 120" stroke="url(#hairHighlight)" stroke-width="7" fill="none" stroke-linecap="round" />
+    <path d="M 370 190 C 395 140, 450 130, 480 155" stroke="#3A322C" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.75" />
+    <path d="M 480 110 C 530 100, 570 135, 595 195" stroke="#3E3630" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.7" />
+    <path d="M 450 75 Q 500 50, 545 80" stroke="#524840" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85" />
+
+    <!-- Fine hair fringe and crown locks -->
+    <path d="M 425 80 Q 470 55, 505 85" stroke="#483F37" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8" />
+    <path d="M 400 230 Q 430 215, 460 225" stroke="#251F1B" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9" />
+    <path d="M 490 225 Q 525 215, 560 230" stroke="#251F1B" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9" />
   </g>
 </svg>

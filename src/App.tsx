@@ -6,11 +6,9 @@ import HeroImage from './components/HeroImage';
 import ContactModal from './components/ContactModal';
 import ResumeModal from './components/ResumeModal';
 import ProjectShowcase from './components/ProjectShowcase';
-import { FileText, ArrowRight, ChevronDown, FolderGit2, ArrowUp, Sun, Moon } from 'lucide-react';
+import { FileText, ChevronDown, FolderGit2, ArrowUp, Sun, Moon } from 'lucide-react';
 
 export default function App() {
-  // Support both: Image on Left (user explicit prompt request) & Image on Right (reference composition)
-  const [imageOnLeft, setImageOnLeft] = useState<boolean>(true);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -127,273 +125,164 @@ export default function App() {
 
       {/* =========================================================================
           HERO LANDING SECTION (Split Screen with Slanted Divider)
+          Permanently fixed layout: Image on the Left Side, Intro on the Right Side
           ========================================================================= */}
       <section className="relative w-full h-screen min-h-[660px] overflow-hidden bg-black select-none">
-        {/* =======================================================================
-            MODE 1: REFERENCE COMPOSITION (Light Gray Left, Black + Photo Right)
-            ======================================================================= */}
-        {!imageOnLeft && (
-          <div className="relative w-full h-full">
-            {/* Base Layer: Solid Black Right Side */}
-            <div className="absolute inset-0 bg-black" />
+        <div className="relative w-full h-full">
+          {/* Base Layer: Light Gray Right Side */}
+          <div className="absolute inset-0" style={{ backgroundColor: '#DFE2E5' }} />
 
-            {/* Desktop Right Side Content: Top-Right Nav & Hero Photo */}
-            <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none">
-              {/* Top Navigation Bar */}
-              <header className="absolute top-8 right-10 xl:right-16 pointer-events-auto">
-                <Navigation
-                  onOpenContact={() => setIsContactOpen(true)}
-                  onOpenResume={() => setIsResumeOpen(true)}
-                  onItemClick={handleNavClick}
-                  isDarkTheme={true}
-                />
-              </header>
+          {/* Desktop Right Side Content: Nav & Intro on Light Gray */}
+          <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none">
+            {/* Top Navigation Bar */}
+            <header className="absolute top-8 right-10 xl:right-16 pointer-events-auto">
+              <Navigation
+                onOpenContact={() => setIsContactOpen(true)}
+                onOpenResume={() => setIsResumeOpen(true)}
+                onItemClick={handleNavClick}
+                isDarkTheme={false}
+              />
+            </header>
 
-              {/* Photo on the right side (Standard size matching reference) */}
-              <div className="absolute right-0 bottom-0 w-[55%] h-full pointer-events-auto flex items-end justify-center xl:justify-end xl:pr-16">
-                <HeroImage isLarge={false} />
-              </div>
-            </div>
+            {/* Right Intro Area (Constrained to the light gray area) with Entrance Animation */}
+            <div className="absolute right-0 inset-y-0 w-[48%] h-full flex flex-col justify-between p-10 lg:p-12 xl:p-16 pointer-events-auto">
+              <div className="h-10" />
 
-            {/* Slanted Light Gray Left Section */}
-            <div
-              className="relative lg:absolute inset-0 w-full lg:w-full z-20 pointer-events-none clip-slant-right flex flex-col justify-between"
-              style={{ backgroundColor: '#DFE2E5' }}
-            >
-              {/* Left Content Area (Constrained so it stays within the light gray slant) */}
-              <div className="w-full lg:w-[44%] xl:w-[43%] h-full flex flex-col justify-between p-6 sm:p-10 md:p-12 lg:p-14 xl:p-18 pointer-events-auto">
-                {/* Top-Left: Monogram Logo */}
-                <div className="w-full flex items-center justify-between">
-                  <Logo />
-
-                  {/* Mobile Navigation Trigger */}
-                  <div className="lg:hidden">
-                    <Navigation
-                      onOpenContact={() => setIsContactOpen(true)}
-                      onOpenResume={() => setIsResumeOpen(true)}
-                      onItemClick={handleNavClick}
-                      isDarkTheme={false}
-                    />
-                  </div>
-                </div>
-
-                {/* Middle: Introduction & Name with Entrance Animation */}
-                <div className="my-auto py-8">
-                  <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-neutral-800 tracking-tight mb-2 animate-fade-in-up animation-delay-100">
-                    Hi, I am
-                  </p>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] mb-4 animate-fade-in-up animation-delay-200">
-                    Sumanth Gajjela
-                  </h1>
-                  <p className="text-xs sm:text-sm md:text-base font-semibold text-neutral-500 uppercase tracking-widest leading-relaxed mb-6 animate-fade-in-up animation-delay-300">
-                    Data Science Student{' '}
-                    <span className="text-neutral-400 font-light mx-1">|</span>{' '}
-                    Generative AI &amp; AI Engineering
-                  </p>
-
-                  {/* Action CTAs: View Resume, Projects & Connect */}
-                  <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animation-delay-400">
-                    <button
-                      onClick={() => setIsResumeOpen(true)}
-                      className="flex items-center gap-2 bg-neutral-900 text-white font-semibold text-xs tracking-wider uppercase px-5 py-2.5 rounded-full hover:bg-neutral-800 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md cursor-pointer"
-                    >
-                      <FileText className="w-3.5 h-3.5" />
-                      <span>View Resume</span>
-                    </button>
-
-                    <button
-                      onClick={scrollToProjects}
-                      className="flex items-center gap-2 bg-white text-black border border-neutral-300 font-semibold text-xs tracking-wider uppercase px-4 py-2.5 rounded-full hover:bg-neutral-100 transition-all shadow-xs cursor-pointer"
-                    >
-                      <FolderGit2 className="w-3.5 h-3.5" />
-                      <span>Projects</span>
-                    </button>
-
-                    <button
-                      onClick={() => setIsContactOpen(true)}
-                      className="flex items-center gap-1 text-xs font-semibold text-neutral-700 hover:text-black uppercase tracking-wider px-2 py-2 transition-colors cursor-pointer group"
-                    >
-                      <span>Contact</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Bottom-Left: Social Icons with Entrance Animation */}
-                <div className="w-full animate-fade-in-up animation-delay-500">
-                  <SocialIcons onOpenContact={() => setIsContactOpen(true)} />
-                </div>
-              </div>
-
-              {/* Mobile Fallback: Photo below fold on smaller viewports */}
-              <div className="lg:hidden w-full h-80 bg-black pointer-events-auto flex items-end justify-center">
-                <HeroImage isLarge={false} />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* =======================================================================
-            MODE 2: REQUESTED LAYOUT (Photo on Left Side, Intro on Right Side)
-            Photo is noticeably INCREASED in size as requested!
-            ======================================================================= */}
-        {imageOnLeft && (
-          <div className="relative w-full h-full">
-            {/* Base Layer: Light Gray Right Side */}
-            <div className="absolute inset-0" style={{ backgroundColor: '#DFE2E5' }} />
-
-            {/* Desktop Right Side Content: Nav & Intro on Light Gray */}
-            <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none">
-              {/* Top Navigation Bar */}
-              <header className="absolute top-8 right-10 xl:right-16 pointer-events-auto">
-                <Navigation
-                  onOpenContact={() => setIsContactOpen(true)}
-                  onOpenResume={() => setIsResumeOpen(true)}
-                  onItemClick={handleNavClick}
-                  isDarkTheme={false}
-                />
-              </header>
-
-              {/* Right Intro Area (Constrained to the light gray area) with Entrance Animation */}
-              <div className="absolute right-0 inset-y-0 w-[48%] h-full flex flex-col justify-between p-10 lg:p-12 xl:p-16 pointer-events-auto">
-                <div className="h-10" />
-
-                {/* Middle: Introduction & Name with Entrance Animation */}
-                <div className="my-auto py-8 max-w-xl">
-                  <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-neutral-800 tracking-tight mb-2 animate-fade-in-up animation-delay-100">
-                    Hi, I am
-                  </p>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] mb-4 animate-fade-in-up animation-delay-200">
-                    Sumanth Gajjela
-                  </h1>
-                  <p className="text-xs sm:text-sm md:text-base font-semibold text-neutral-500 uppercase tracking-widest leading-relaxed mb-6 animate-fade-in-up animation-delay-300">
-                    Data Science Student{' '}
-                    <span className="text-neutral-400 font-light mx-1">|</span>{' '}
-                    Generative AI &amp; AI Engineering
-                  </p>
-
-                  {/* Direct action buttons: View Resume, Projects & Get in touch */}
-                  <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animation-delay-400">
-                    <button
-                      onClick={() => setIsResumeOpen(true)}
-                      className="flex items-center gap-2 bg-neutral-900 text-white font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-neutral-800 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md cursor-pointer"
-                    >
-                      <FileText className="w-3.5 h-3.5" />
-                      <span>View Resume</span>
-                    </button>
-
-                    <button
-                      onClick={scrollToProjects}
-                      className="flex items-center gap-2 bg-white text-black font-semibold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:bg-neutral-100 transition-all shadow-xs cursor-pointer"
-                    >
-                      <FolderGit2 className="w-3.5 h-3.5" />
-                      <span>Projects</span>
-                    </button>
-
-                    <button
-                      onClick={() => setIsContactOpen(true)}
-                      className="border border-neutral-400/80 text-neutral-800 font-semibold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:bg-neutral-300/60 transition-all cursor-pointer"
-                    >
-                      Get in touch
-                    </button>
-                  </div>
-                </div>
-
-                {/* Bottom Quick Links with Entrance Animation */}
-                <div className="flex items-center gap-4 text-xs font-semibold text-neutral-500 uppercase tracking-wider animate-fade-in-up animation-delay-500">
-                  <a
-                    href="https://www.linkedin.com/in/sumanth-gajjela/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-black transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                  <span>•</span>
-                  <a
-                    href="https://github.com/SumanthG-1312"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-black transition-colors"
-                  >
-                    GitHub
-                  </a>
-                  <span>•</span>
-                  <a
-                    href="https://x.com/SumanthG1312"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-black transition-colors"
-                  >
-                    X (Twitter)
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Slanted Black Left Section with Hero Photo & Monogram Logo (Wider container & Larger Photo) */}
-            <div className="relative lg:absolute inset-0 w-full lg:w-full z-20 pointer-events-none clip-slant-left flex flex-col justify-between bg-black">
-              {/* Left Column Content - Expanded width for larger photo */}
-              <div className="w-full lg:w-[54%] xl:w-[52%] h-full flex flex-col justify-between p-4 sm:p-8 md:p-10 pointer-events-auto">
-                {/* Top-Left: Monogram Logo (white/light theme for dark background) */}
-                <div className="w-full flex items-center justify-between p-2">
-                  <Logo theme="light" />
-
-                  {/* Mobile Navigation Trigger */}
-                  <div className="lg:hidden">
-                    <Navigation
-                      onOpenContact={() => setIsContactOpen(true)}
-                      onOpenResume={() => setIsResumeOpen(true)}
-                      onItemClick={handleNavClick}
-                      isDarkTheme={true}
-                    />
-                  </div>
-                </div>
-
-                {/* Photo placed on the left side with INCREASED photo size */}
-                <div className="w-full h-full flex items-end justify-center pointer-events-auto overflow-hidden">
-                  <HeroImage isLarge={true} />
-                </div>
-
-                {/* Bottom-Left: Social Icons with Entrance Animation */}
-                <div className="w-full z-20 p-2 animate-fade-in-up animation-delay-500">
-                  <SocialIcons onOpenContact={() => setIsContactOpen(true)} darkBackground={true} />
-                </div>
-              </div>
-
-              {/* Mobile Fallback: Intro below fold on smaller viewports */}
-              <div className="lg:hidden w-full p-8 bg-[#DFE2E5] text-neutral-900 pointer-events-auto">
-                <p className="text-lg font-medium text-neutral-700 animate-fade-in-up animation-delay-100">Hi, I am</p>
-                <h1 className="text-3xl font-extrabold text-neutral-900 mt-1 mb-2 animate-fade-in-up animation-delay-200">Sumanth Gajjela</h1>
-                <p className="text-xs font-semibold text-neutral-600 uppercase tracking-widest mb-6 animate-fade-in-up animation-delay-300">
-                  Data Science Student | Generative AI &amp; AI Engineering
+              {/* Middle: Introduction & Name with Entrance Animation */}
+              <div className="my-auto py-8 max-w-xl">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-medium text-neutral-800 tracking-tight mb-2 animate-fade-in-up animation-delay-100">
+                  Hi, I am
                 </p>
-                <div className="flex flex-col gap-2.5">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-[68px] font-extrabold text-neutral-900 tracking-tight leading-[1.08] mb-4 animate-fade-in-up animation-delay-200">
+                  Sumanth Gajjela
+                </h1>
+                <p className="text-xs sm:text-sm md:text-base font-semibold text-neutral-500 uppercase tracking-widest leading-relaxed mb-6 animate-fade-in-up animation-delay-300">
+                  Data Science Student{' '}
+                  <span className="text-neutral-400 font-light mx-1">|</span>{' '}
+                  Generative AI &amp; AI Engineering
+                </p>
+
+                {/* Direct action buttons: View Resume, Projects & Get in touch */}
+                <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animation-delay-400">
                   <button
                     onClick={() => setIsResumeOpen(true)}
-                    className="w-full py-3 bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-full flex items-center justify-center gap-2"
+                    className="flex items-center gap-2 bg-neutral-900 text-white font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-neutral-800 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md cursor-pointer"
                   >
-                    <FileText className="w-4 h-4" />
-                    <span>VIEW RESUME</span>
+                    <FileText className="w-3.5 h-3.5" />
+                    <span>View Resume</span>
                   </button>
+
                   <button
                     onClick={scrollToProjects}
-                    className="w-full py-3 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-full flex items-center justify-center gap-2"
+                    className="flex items-center gap-2 bg-white text-black font-semibold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:bg-neutral-100 transition-all shadow-xs cursor-pointer"
                   >
-                    <FolderGit2 className="w-4 h-4" />
-                    <span>EXPLORE PROJECTS</span>
+                    <FolderGit2 className="w-3.5 h-3.5" />
+                    <span>Projects</span>
                   </button>
+
                   <button
                     onClick={() => setIsContactOpen(true)}
-                    className="w-full py-3 border border-neutral-400 text-neutral-900 font-bold text-xs uppercase tracking-wider rounded-full"
+                    className="border border-neutral-400/80 text-neutral-800 font-semibold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full hover:bg-neutral-300/60 transition-all cursor-pointer"
                   >
-                    CONTACT ME
+                    Get in touch
                   </button>
                 </div>
               </div>
+
+              {/* Bottom Quick Links with Entrance Animation */}
+              <div className="flex items-center gap-4 text-xs font-semibold text-neutral-500 uppercase tracking-wider animate-fade-in-up animation-delay-500">
+                <a
+                  href="https://www.linkedin.com/in/sumanth-gajjela/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-black transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <span>•</span>
+                <a
+                  href="https://github.com/SumanthG-1312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-black transition-colors"
+                >
+                  GitHub
+                </a>
+                <span>•</span>
+                <a
+                  href="https://x.com/SumanthG1312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-black transition-colors"
+                >
+                  X (Twitter)
+                </a>
+              </div>
             </div>
           </div>
-        )}
+
+          {/* Slanted Black Left Section with Hero Photo & Monogram Logo (Wider container & Larger Photo) */}
+          <div className="relative lg:absolute inset-0 w-full lg:w-full z-20 pointer-events-none clip-slant-left flex flex-col justify-between bg-black">
+            {/* Left Column Content - Expanded width for larger photo */}
+            <div className="w-full lg:w-[54%] xl:w-[52%] h-full flex flex-col justify-between p-4 sm:p-8 md:p-10 pointer-events-auto">
+              {/* Top-Left: Monogram Logo (white/light theme for dark background) */}
+              <div className="w-full flex items-center justify-between p-2">
+                <Logo theme="light" />
+
+                {/* Mobile Navigation Trigger */}
+                <div className="lg:hidden">
+                  <Navigation
+                    onOpenContact={() => setIsContactOpen(true)}
+                    onOpenResume={() => setIsResumeOpen(true)}
+                    onItemClick={handleNavClick}
+                    isDarkTheme={true}
+                  />
+                </div>
+              </div>
+
+              {/* Photo placed on the left side with INCREASED photo size */}
+              <div className="w-full h-full flex items-end justify-center pointer-events-auto overflow-hidden">
+                <HeroImage isLarge={true} />
+              </div>
+
+              {/* Bottom-Left: Social Icons with Entrance Animation */}
+              <div className="w-full z-20 p-2 animate-fade-in-up animation-delay-500">
+                <SocialIcons onOpenContact={() => setIsContactOpen(true)} darkBackground={true} />
+              </div>
+            </div>
+
+            {/* Mobile Fallback: Intro below fold on smaller viewports */}
+            <div className="lg:hidden w-full p-8 bg-[#DFE2E5] text-neutral-900 pointer-events-auto">
+              <p className="text-lg font-medium text-neutral-700 animate-fade-in-up animation-delay-100">Hi, I am</p>
+              <h1 className="text-3xl font-extrabold text-neutral-900 mt-1 mb-2 animate-fade-in-up animation-delay-200">Sumanth Gajjela</h1>
+              <p className="text-xs font-semibold text-neutral-600 uppercase tracking-widest mb-6 animate-fade-in-up animation-delay-300">
+                Data Science Student | Generative AI &amp; AI Engineering
+              </p>
+              <div className="flex flex-col gap-2.5">
+                <button
+                  onClick={() => setIsResumeOpen(true)}
+                  className="w-full py-3 bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider rounded-full flex items-center justify-center gap-2"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>VIEW RESUME</span>
+                </button>
+                <button
+                  onClick={scrollToProjects}
+                  className="w-full py-3 bg-white text-black font-bold text-xs uppercase tracking-wider rounded-full flex items-center justify-center gap-2"
+                >
+                  <FolderGit2 className="w-4 h-4" />
+                  <span>EXPLORE PROJECTS</span>
+                </button>
+                <button
+                  onClick={() => setIsContactOpen(true)}
+                  className="w-full py-3 border border-neutral-400 text-neutral-900 font-bold text-xs uppercase tracking-wider rounded-full"
+                >
+                  CONTACT ME
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Scroll Indicator at bottom edge of hero */}
         <button
@@ -518,76 +407,6 @@ export default function App() {
           </div>
         </div>
       </footer>
-
-      {/* =========================================================================
-          LAYOUT TOGGLE SWITCH (Bottom Floating Dock)
-          Allows instant switching between "Image Left (Requested)" & "Image Right (Reference Image)"
-          ========================================================================= */}
-      <aside aria-label="Layout Switcher" className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40">
-        <div
-          className={`flex items-center gap-1.5 p-1 backdrop-blur-md rounded-full shadow-2xl transition-all border ${
-            isDark
-              ? 'bg-neutral-900/90 hover:bg-neutral-900 border-neutral-700/80'
-              : 'bg-white/90 hover:bg-white border-slate-300 shadow-lg'
-          }`}
-        >
-          <button
-            onClick={() => setImageOnLeft(true)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all cursor-pointer flex items-center gap-1.5 ${
-              imageOnLeft
-                ? isDark
-                  ? 'bg-white text-black font-semibold shadow-sm'
-                  : 'bg-neutral-900 text-white font-semibold shadow-sm'
-                : isDark
-                ? 'text-neutral-400 hover:text-white'
-                : 'text-neutral-600 hover:text-black'
-            }`}
-          >
-            <span>Image Left</span>
-            <span
-              className={`text-[10px] px-1 rounded font-mono ${
-                imageOnLeft
-                  ? isDark
-                    ? 'bg-neutral-200 text-neutral-800'
-                    : 'bg-neutral-700 text-white'
-                  : isDark
-                  ? 'bg-neutral-800 text-neutral-300'
-                  : 'bg-slate-200 text-neutral-700'
-              }`}
-            >
-              Specified
-            </span>
-          </button>
-
-          <button
-            onClick={() => setImageOnLeft(false)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all cursor-pointer flex items-center gap-1.5 ${
-              !imageOnLeft
-                ? isDark
-                  ? 'bg-white text-black font-semibold shadow-sm'
-                  : 'bg-neutral-900 text-white font-semibold shadow-sm'
-                : isDark
-                ? 'text-neutral-400 hover:text-white'
-                : 'text-neutral-600 hover:text-black'
-            }`}
-          >
-            <span>Image Right</span>
-            <span
-              className={`text-[10px] px-1 rounded font-mono ${
-                !imageOnLeft
-                  ? isDark
-                    ? 'bg-neutral-200 text-neutral-800'
-                    : 'bg-neutral-700 text-white'
-                  : isDark
-                  ? 'bg-neutral-800 text-neutral-300'
-                  : 'bg-slate-200 text-neutral-700'
-              }`}
-            >
-              Reference
-            </span>
-          </button>
-        </div>
-      </aside>
 
       {/* Toast Notification */}
       {toastMessage && (
