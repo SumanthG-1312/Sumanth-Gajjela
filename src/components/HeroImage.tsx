@@ -8,12 +8,12 @@ interface HeroImageProps {
 
 export default function HeroImage({ className = '', isFlipped = false, isLarge = false }: HeroImageProps) {
   const base = import.meta.env.BASE_URL || './';
-  const defaultPortrait = `${base.replace(/\/$/, '')}/default-portrait.svg`;
+  const defaultPortrait = `${base.replace(/\/$/, '')}/professinal%20pic-800kb.jpeg`;
   const [photoSrc, setPhotoSrc] = useState<string>(defaultPortrait);
 
   // Automatically check if user's uploaded photo or high-res image is in public
   useEffect(() => {
-    // If the user has a saved photo in localStorage, prefer that; otherwise use default likeness
+    // If the user has a saved photo in localStorage, prefer that; otherwise use the bundled profile photo
     const saved = localStorage.getItem('sumanth_portfolio_photo');
     if (saved) {
       setPhotoSrc(saved);
