@@ -1,11 +1,23 @@
-<div align="center">
+# Sumanth Gajjela
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A clean, modern personal landing page for Sumanth Gajjela.
 
-  <h1>Built with AI Studio</h2>
+## Overview
+This repository contains a lightweight static portfolio website built with plain HTML, CSS, and JavaScript.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Files
+- `index.html` – page structure and content
+- `styles.css` – visual design and responsive layout
+- `script.js` – small script for dynamic footer year
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Run locally
+Open `index.html` in a browser, or serve the folder with a static server:
 
-</div>
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+## Customization
+Update the text, links, and contact details in `index.html` to match your personal information and projects.
