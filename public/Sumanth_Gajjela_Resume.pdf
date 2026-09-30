@@ -1,0 +1,665 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Annots [
+<</Type /Annot /Subtype /Link /Rect [367.6549999999999727 780.8899999999999864 403.2799999999999727 769.8899999999999864] /Border [0 0 0] /A <</S /URI /URI (https://www.linkedin.com/in/sumanth-gajjela/) >> >>
+<</Type /Annot /Subtype /Link /Rect [411.0699999999999932 780.8899999999999864 440.5199999999999818 769.8899999999999864] /Border [0 0 0] /A <</S /URI /URI (https://github.com/SumanthG-1312) >> >>
+]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 7774
+>>
+stream
+0.200025 w
+0 G
+BT
+/F2 22 Tf
+25.2999999999999972 TL
+0.067 g
+211.7299999999999613 789.8899999999999864 Td
+(Sumanth Gajjela) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.133 g
+154.7599999999999056 771.8899999999999864 Td
+(+91 7207556765 | sumanthgajjela13@gmail.com | LinkedIn | GitHub) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.067 g
+48. 747.8899999999999864 Td
+(SUMMARY) Tj
+ET
+0.71 G
+0.75 w
+48. 743.8899999999999864 m
+547.2799999999999727 743.8899999999999864 l
+S
+BT
+/F1 9 Tf
+12.1500000000000004 TL
+0.133 g
+48. 729.8899999999999864 Td
+(AI-focused Computer Science student with hands-on experience building LLM-powered applications using Python,) Tj
+T* (LangChain, FastAPI, RAG, and NLP. Interested in Generative AI, Agentic AI, LLM applications, and intelligent systems, with) Tj
+T* (practical experience integrating AI models, retrieval systems, and APIs.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.067 g
+48. 678.3899999999999864 Td
+(TECHNICAL SKILLS) Tj
+ET
+0.71 G
+0.75 w
+48. 674.3899999999999864 m
+547.2799999999999727 674.3899999999999864 l
+S
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 660.3899999999999864 Td
+(Programming Languages:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+163.1500000000000057 660.3899999999999864 Td
+(Python, C++, SQL) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 646.8899999999999864 Td
+(Frameworks/Libraries:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+148.2100000000000364 646.8899999999999864 Td
+(FastAPI, Pydantic, LangChain, LangGraph, NumPy, Pandas) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 633.3899999999999864 Td
+(Generative AI:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+112.75 633.3899999999999864 Td
+(LLMs, Prompt Engineering, RAG, Embeddings) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 619.8899999999999864 Td
+(Machine Learning:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+131.1999999999999886 619.8899999999999864 Td
+(NLP, Machine Learning Basics, Transformers) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 606.3899999999999864 Td
+(Models & Platforms:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+138.6700000000000159 606.3899999999999864 Td
+(Ollama, Hugging Face, Gemini, OpenAI) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 592.8899999999999864 Td
+(Databases:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+99.6099999999999994 592.8899999999999864 Td
+(MySQL, ChromaDB, FAISS) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 579.3899999999999864 Td
+(Tools:) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.133 g
+78.1899999999999977 579.3899999999999864 Td
+(Git, GitHub, Docker, Google Colab, Jupyter Notebook, n8n) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.067 g
+48. 555.8899999999999864 Td
+(PROJECTS) Tj
+ET
+0.71 G
+0.75 w
+48. 551.8899999999999864 m
+547.2799999999999727 551.8899999999999864 l
+S
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.067 g
+48. 537.8899999999999864 Td
+(IPL Copilot – AI-Powered Cricket Assistant) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.067 g
+468.3499999999999659 537.8899999999999864 Td
+(Aug 2026 – Present) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+48. 524.8899999999999864 Td
+(Generative AI & Data Engineering) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+329.3399999999999181 524.8899999999999864 Td
+(Python, Pandas, LangChain, Ollama, ChromaDB, FastAPI) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 512.8899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 512.8899999999999864 Td
+(Implemented natural-language Q&A over 2008–2024 IPL data covering matches, players, teams, statistics, and ball-by-ball) Tj
+T* (events.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 488.3899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 488.3899999999999864 Td
+(Processed structured match data into metadata-rich documents for semantic retrieval and grounded LLM responses.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 474.8899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 474.8899999999999864 Td
+(Integrated LangChain + Ollama with query caching and prompt engineering for efficient responses.) Tj
+ET
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.067 g
+48. 453.3899999999999864 Td
+(AI Travel Planning Assistant) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.067 g
+527.4800000000000182 453.3899999999999864 Td
+(2026) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+48. 440.3899999999999864 Td
+(Generative AI & RAG Application) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+351.3549999999999045 440.3899999999999864 Td
+(Python, Pydantic, RAG, LangChain, LLMs, Frontend) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 428.3899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 428.3899999999999864 Td
+(Built an AI-powered travel planning application that generates personalized trip plans based on destination, duration, budget,) Tj
+T* (and user preferences.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 403.8899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 403.8899999999999864 Td
+(Used RAG to retrieve relevant travel information and provide more context-aware recommendations.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+54. 390.3899999999999864 Td
+(•) Tj
+ET
+BT
+/F1 8.5 Tf
+11.0500000000000007 TL
+0.133 g
+63. 390.3899999999999864 Td
+(Used Pydantic for structured input and output validation and connected the AI backend with a simple user interface.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.067 g
+48. 366.8899999999999864 Td
+(EXPERIENCE) Tj
+ET
+0.71 G
+0.75 w
+48. 362.8899999999999864 m
+547.2799999999999727 362.8899999999999864 l
+S
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.067 g
+48. 348.8899999999999864 Td
+(Agentic AI Intern) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.067 g
+462.8599999999999568 348.8899999999999864 Td
+(Feb 2025 – Jun 2026) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+48. 335.8899999999999864 Td
+(Innomatics Research Labs) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+483.0199999999999818 335.8899999999999864 Td
+(Hyderabad, India) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+52. 322.8899999999999864 Td
+(Designed an end-to-end LLM-powered AI application using Python, LangChain, NLP, and FastAPI.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+52. 310.8899999999999864 Td
+(Worked with LLM workflows, prompt engineering, and context handling to build AI-powered application features.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+52. 298.8899999999999864 Td
+(Integrated AI components with RESTful APIs using FastAPI to connect backend services with AI workflows.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.067 g
+48. 276.8899999999999864 Td
+(EDUCATION) Tj
+ET
+0.71 G
+0.75 w
+48. 272.8899999999999864 m
+547.2799999999999727 272.8899999999999864 l
+S
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 258.8899999999999864 Td
+(Vignan Institute of Technology and Science) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.067 g
+480.7699999999999818 258.8899999999999864 Td
+(Telangana, India) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+48. 246.8899999999999864 Td
+(B.Tech in Computer Science \(Data Science\)) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+462.8749999999999432 246.8899999999999864 Td
+(2024 – Expected 2027) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.067 g
+48. 233.8899999999999864 Td
+(Teegala Krishna Reddy Engineering College) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.067 g
+480.7699999999999818 233.8899999999999864 Td
+(Telangana, India) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+48. 221.8899999999999864 Td
+(Diploma in Electronics & Communication Engineering) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.133 g
+500.4449999999999932 221.8899999999999864 Td
+(2021 – 2024) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20260930094602-00'00')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000008396 00000 n 
+0000010213 00000 n 
+0000000015 00000 n 
+0000000570 00000 n 
+0000008453 00000 n 
+0000008578 00000 n 
+0000008708 00000 n 
+0000008841 00000 n 
+0000008978 00000 n 
+0000009101 00000 n 
+0000009230 00000 n 
+0000009362 00000 n 
+0000009498 00000 n 
+0000009626 00000 n 
+0000009753 00000 n 
+0000009882 00000 n 
+0000010015 00000 n 
+0000010117 00000 n 
+0000010461 00000 n 
+0000010547 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <CE502AD5771C27F9CA4A57ABE1A0CC7E> <CE502AD5771C27F9CA4A57ABE1A0CC7E> ]
+>>
+startxref
+10651
+%%EOF

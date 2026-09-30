@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background pure black -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+
+    <!-- Skin tone gradients -->
+    <linearGradient id="skin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C68662" />
+      <stop offset="40%" stop-color="#B8734D" />
+      <stop offset="100%" stop-color="#9C5938" />
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#8A482A" />
+      <stop offset="100%" stop-color="#5E3019" />
+    </linearGradient>
+
+    <!-- Suit gradient -->
+    <linearGradient id="suit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2024" />
+      <stop offset="50%" stop-color="#141517" />
+      <stop offset="100%" stop-color="#0B0C0E" />
+    </linearGradient>
+    <linearGradient id="lapel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282B30" />
+      <stop offset="100%" stop-color="#141517" />
+    </linearGradient>
+
+    <!-- Hair gradient -->
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#221E1C" />
+      <stop offset="50%" stop-color="#141211" />
+      <stop offset="100%" stop-color="#0A0908" />
+    </linearGradient>
+
+    <radialGradient id="rimLight" cx="65%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Subtle ambient studio spotlight -->
+  <circle cx="480" cy="380" r="320" fill="url(#rimLight)" />
+
+  <!-- Shoulders & Suit Torso -->
+  <g id="body">
+    <!-- Back jacket base -->
+    <path d="M 120 1000 L 150 780 C 180 660, 240 560, 340 530 L 460 530 C 560 560, 640 660, 680 780 L 720 1000 Z" fill="url(#suit)" />
+
+    <!-- White dress shirt visible in center V -->
+    <path d="M 370 520 L 430 520 L 460 670 L 420 840 L 380 840 L 340 670 Z" fill="#F8FAFC" />
+    <!-- White shirt inner shadow & collar folds -->
+    <path d="M 395 530 L 420 720 L 398 840 L 392 840 L 380 720 Z" fill="#E2E8F0" />
+    <path d="M 370 525 L 340 640 L 375 625 L 395 535 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <path d="M 430 525 L 460 640 L 425 625 L 405 535 Z" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5" />
+    <!-- Shirt buttons -->
+    <circle cx="400" cy="740" r="3" fill="#94A3B8" />
+    <circle cx="400" cy="800" r="3" fill="#94A3B8" />
+
+    <!-- Suit Lapels -->
+    <!-- Left lapel (viewer's left) -->
+    <path d="M 260 620 L 340 530 L 385 680 L 320 770 L 260 620 Z" fill="url(#lapel)" stroke="#2B2E33" stroke-width="2" />
+    <path d="M 320 770 L 385 680 L 395 860 L 290 890 Z" fill="#17191C" />
+
+    <!-- Right lapel (viewer's right) -->
+    <path d="M 540 620 L 460 530 L 415 680 L 480 770 L 540 620 Z" fill="url(#lapel)" stroke="#2B2E33" stroke-width="2" />
+    <path d="M 480 770 L 415 680 L 405 860 L 510 890 Z" fill="#17191C" />
+  </g>
+
+  <!-- Neck & Adam's apple -->
+  <g id="neck">
+    <path d="M 360 420 L 350 540 C 370 560, 430 560, 450 540 L 440 420 Z" fill="url(#skin)" />
+    <!-- Neck shadow under chin -->
+    <path d="M 350 420 C 370 480, 430 480, 450 420 L 450 460 C 430 510, 370 510, 350 460 Z" fill="url(#skinShadow)" opacity="0.6" />
+  </g>
+
+  <!-- Head & Face Structure -->
+  <g id="face">
+    <!-- Jaw and head base -->
+    <path d="M 315 270 C 310 370, 340 480, 400 480 C 460 480, 490 370, 485 270 C 480 180, 320 180, 315 270 Z" fill="url(#skin)" />
+
+    <!-- Left & right ears -->
+    <path d="M 305 270 C 290 280, 290 330, 315 340 Z" fill="#B36E48" />
+    <path d="M 495 270 C 510 280, 510 330, 485 340 Z" fill="#B36E48" />
+
+    <!-- Cheek & Jaw shading for sculpt -->
+    <path d="M 320 320 C 330 410, 360 460, 400 475 C 370 460, 340 410, 330 350 Z" fill="url(#skinShadow)" opacity="0.35" />
+    <path d="M 480 320 C 470 410, 440 460, 400 475 C 430 460, 460 410, 470 350 Z" fill="url(#skinShadow)" opacity="0.25" />
+
+    <!-- Eyes -->
+    <!-- Left eye -->
+    <ellipse cx="360" cy="295" rx="18" ry="10" fill="#FFFFFF" />
+    <circle cx="362" cy="295" r="8" fill="#3D2314" />
+    <circle cx="362" cy="295" r="4.5" fill="#0A0604" />
+    <circle cx="360" cy="293" r="2.5" fill="#FFFFFF" opacity="0.9" />
+    <path d="M 342 293 Q 360 285 378 293" stroke="#26170D" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Right eye -->
+    <ellipse cx="440" cy="295" rx="18" ry="10" fill="#FFFFFF" />
+    <circle cx="438" cy="295" r="8" fill="#3D2314" />
+    <circle cx="438" cy="295" r="4.5" fill="#0A0604" />
+    <circle cx="436" cy="293" r="2.5" fill="#FFFFFF" opacity="0.9" />
+    <path d="M 422 293 Q 440 285 458 293" stroke="#26170D" stroke-width="3" fill="none" stroke-linecap="round" />
+
+    <!-- Eyebrows (thick, defined youthful brows) -->
+    <path d="M 335 272 Q 360 262 385 270" stroke="#1C140F" stroke-width="6" fill="none" stroke-linecap="round" />
+    <path d="M 415 270 Q 440 262 465 272" stroke="#1C140F" stroke-width="6" fill="none" stroke-linecap="round" />
+
+    <!-- Nose -->
+    <path d="M 400 280 L 396 345 Q 390 358 400 360 Q 410 358 404 345 Z" fill="#AA643E" opacity="0.4" />
+    <path d="M 390 355 Q 400 365 410 355" stroke="#7A3F20" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <circle cx="388" cy="354" r="2.5" fill="#5E3019" />
+    <circle cx="412" cy="354" r="2.5" fill="#5E3019" />
+
+    <!-- Mustache & Stubble -->
+    <path d="M 382 385 Q 400 380 418 385" stroke="#2A1B14" stroke-width="3.5" stroke-linecap="round" opacity="0.65" />
+    <!-- Chin stubble -->
+    <path d="M 385 440 Q 400 450 415 440" stroke="#2A1B14" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+
+    <!-- Lips -->
+    <path d="M 378 402 Q 400 396 422 402 Q 400 418 378 402 Z" fill="#995040" />
+    <path d="M 378 402 Q 400 404 422 402" stroke="#68291F" stroke-width="1.8" fill="none" />
+  </g>
+
+  <!-- Voluminous Stylish Wavy Dark Hair -->
+  <g id="hair">
+    <!-- Main hair volume silhouette matching Sumanth's photo -->
+    <path d="M 315 260 
+             C 290 230, 290 140, 330 90 
+             C 360 50, 420 40, 460 65 
+             C 500 90, 520 150, 500 230 
+             C 490 250, 485 270, 485 280
+             C 475 250, 465 240, 450 245
+             C 430 215, 380 215, 350 245
+             C 335 240, 325 250, 315 260 Z" fill="url(#hair)" />
+
+    <!-- Individual hair wave textures -->
+    <path d="M 330 140 C 360 80, 430 80, 450 120" stroke="#36302B" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6" />
+    <path d="M 350 110 C 390 60, 440 70, 470 110" stroke="#453E38" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7" />
+    <path d="M 320 170 C 340 130, 380 120, 400 140" stroke="#36302B" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.6" />
+    <path d="M 400 100 C 440 90, 470 120, 490 170" stroke="#3A332E" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6" />
+    <path d="M 380 70 Q 420 50 450 75" stroke="#4E4742" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8" />
+  </g>
+</svg>
